@@ -1,8 +1,9 @@
 import { db } from '@/data/mockStore';
 import { useAuth } from '@/contexts/AuthContext';
 import StatCard from '@/components/StatCard';
+import ParentMeetingForm from '@/components/ParentMeetingForm';
 import { Users, ClipboardList, BookOpen, CalendarDays } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const TeacherDashboard = () => {
   const { user } = useAuth();
