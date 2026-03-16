@@ -1,8 +1,9 @@
 import { db } from '@/data/mockStore';
 import { useAuth } from '@/contexts/AuthContext';
 import StatCard from '@/components/StatCard';
+import ParentMeetingForm from '@/components/ParentMeetingForm';
 import { Users, ClipboardList, BookOpen, CalendarDays } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const TeacherDashboard = () => {
   const { user } = useAuth();
@@ -26,9 +27,12 @@ const TeacherDashboard = () => {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-foreground">Welcome, {user?.name}</h2>
-        <p className="text-sm text-muted-foreground">Subject: {user?.subject || 'General'}</p>
+      <div className="flex items-start justify-between flex-wrap gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-foreground">Welcome, {user?.name}</h2>
+          <p className="text-sm text-muted-foreground">Subject: {user?.subject || 'General'}</p>
+        </div>
+        <ParentMeetingForm />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
