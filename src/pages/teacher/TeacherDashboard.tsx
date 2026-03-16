@@ -27,9 +27,12 @@ const TeacherDashboard = () => {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-foreground">Welcome, {user?.name}</h2>
-        <p className="text-sm text-muted-foreground">Subject: {user?.subject || 'General'}</p>
+      <div className="flex items-start justify-between flex-wrap gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-foreground">Welcome, {user?.name}</h2>
+          <p className="text-sm text-muted-foreground">Subject: {user?.subject || 'General'}</p>
+        </div>
+        <ParentMeetingForm />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
