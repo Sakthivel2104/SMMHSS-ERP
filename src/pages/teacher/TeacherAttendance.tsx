@@ -3,6 +3,8 @@ import { db } from '@/data/mockStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { Download } from 'lucide-react';
+import { exportAttendanceCSV } from '@/lib/csvExport';
 
 const TeacherAttendance = () => {
   const students = db.getStudents();
