@@ -161,15 +161,18 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               <Bell className="w-5 h-5" />
               <span className="absolute -top-1 -right-1 w-4 h-4 bg-destructive rounded-full text-[10px] text-destructive-foreground flex items-center justify-center font-medium">3</span>
             </button>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-primary-foreground">
+            <button
+              onClick={() => navigate(`/${user.role}/profile`)}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-primary-foreground ring-2 ring-primary/20">
                 {initials}
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:block text-left">
                 <p className="text-sm font-medium text-foreground">{user.name}</p>
                 <p className="text-xs text-muted-foreground capitalize">{user.role}</p>
               </div>
-            </div>
+            </button>
           </div>
         </header>
 
