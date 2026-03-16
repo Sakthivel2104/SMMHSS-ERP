@@ -48,6 +48,9 @@ const TeacherAttendance = () => {
               <option key={m} value={m}>{m}</option>
             ))}
           </select>
+          <Button variant="outline" onClick={() => { exportAttendanceCSV(); toast.success('Attendance CSV exported'); }}>
+            <Download className="w-4 h-4 mr-2" />Export CSV
+          </Button>
           <Button onClick={handleSave}>Save All</Button>
         </div>
       </div>

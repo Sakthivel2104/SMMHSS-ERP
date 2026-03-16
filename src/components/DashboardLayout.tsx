@@ -4,7 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import {
   LayoutDashboard, Users, GraduationCap, CalendarDays,
   ClipboardList, Bell, UserCircle, LogOut, BookOpen,
-  ChevronLeft, ChevronRight, BarChart3, Calendar, Menu,
+  ChevronLeft, ChevronRight, BarChart3, Calendar, Menu, TrendingUp,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from '@/components/ThemeToggle';

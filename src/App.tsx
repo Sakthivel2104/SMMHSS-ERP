@@ -57,6 +57,7 @@ const App = () => (
             <Route path="/admin/teachers" element={<DashboardRoute roles={['admin']}><AdminTeachers /></DashboardRoute>} />
             <Route path="/admin/attendance" element={<DashboardRoute roles={['admin']}><AdminAttendance /></DashboardRoute>} />
             <Route path="/admin/marks" element={<DashboardRoute roles={['admin']}><AdminMarks /></DashboardRoute>} />
+            <Route path="/admin/performance" element={<DashboardRoute roles={['admin']}><StudentPerformance /></DashboardRoute>} />
             <Route path="/admin/events" element={<DashboardRoute roles={['admin']}><EventsPage /></DashboardRoute>} />
             <Route path="/admin/calendar" element={<DashboardRoute roles={['admin']}><CalendarPage /></DashboardRoute>} />
             <Route path="/admin/notifications" element={<DashboardRoute roles={['admin']}><NotificationsPage /></DashboardRoute>} />
