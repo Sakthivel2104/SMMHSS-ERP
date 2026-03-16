@@ -7,6 +7,7 @@ import {
   ChevronLeft, ChevronRight, BarChart3, Calendar, Menu,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ThemeToggle from '@/components/ThemeToggle';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
