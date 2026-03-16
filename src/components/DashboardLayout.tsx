@@ -20,6 +20,7 @@ const roleMenus: Record<string, Array<{ title: string; path: string; icon: any }
     { title: 'Teachers', path: '/admin/teachers', icon: Users },
     { title: 'Attendance', path: '/admin/attendance', icon: ClipboardList },
     { title: 'Marks', path: '/admin/marks', icon: BarChart3 },
+    { title: 'Performance', path: '/admin/performance', icon: TrendingUp },
     { title: 'Events', path: '/admin/events', icon: CalendarDays },
     { title: 'Calendar', path: '/admin/calendar', icon: Calendar },
     { title: 'Notifications', path: '/admin/notifications', icon: Bell },
