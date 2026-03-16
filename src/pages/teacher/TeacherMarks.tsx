@@ -3,8 +3,9 @@ import { db } from '@/data/mockStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Plus, Upload } from 'lucide-react';
+import { Plus, Upload, Download } from 'lucide-react';
 import { toast } from 'sonner';
+import { exportMarksCSV } from '@/lib/csvExport';
 
 const TeacherMarks = () => {
   const [marks, setMarks] = useState(db.getAllMarks());
@@ -53,6 +54,9 @@ const TeacherMarks = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h2 className="text-2xl font-bold text-foreground">Manage Marks</h2>
         <div className="flex gap-3">
+          <Button variant="outline" onClick={() => { exportMarksCSV(); toast.success('Marks CSV exported'); }}>
+            <Download className="w-4 h-4 mr-2" />Export CSV
+          </Button>
           <label className="cursor-pointer">
             <input type="file" accept=".csv" onChange={handleCSVUpload} className="hidden" />
             <Button variant="outline" asChild><span><Upload className="w-4 h-4 mr-2" />Import CSV</span></Button>
