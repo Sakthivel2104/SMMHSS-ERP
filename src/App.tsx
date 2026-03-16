@@ -28,6 +28,7 @@ import StudentDashboard from "@/pages/student/StudentDashboard";
 import StudentMarks from "@/pages/student/StudentMarks";
 import StudentAttendance from "@/pages/student/StudentAttendance";
 import StudentFees from "@/pages/student/StudentFees";
+import StudentPerformance from "@/pages/admin/StudentPerformance";
 
 import NotFound from "@/pages/NotFound";
 
