@@ -111,6 +111,10 @@ const defaultUsers: User[] = [
   { id: 3, email: 'student@school.com', password: 'password123', role: 'student', name: 'Alex Rivera', phone: '+1 555-0103', class: '10-A', roll: '101', joinDate: '2022-06-01' },
   { id: 4, email: 'math@school.com', password: 'password123', role: 'teacher', name: 'Elena Rodriguez', phone: '+1 555-0104', subject: 'Mathematics', joinDate: '2021-08-15' },
   { id: 5, email: 'science@school.com', password: 'password123', role: 'teacher', name: 'Dr. James Park', phone: '+1 555-0105', subject: 'Physics', joinDate: '2020-09-01' },
+  { id: 6, email: 'emma@school.com', password: 'password123', role: 'student', name: 'Emma Thompson', phone: '+1 555-0106', class: '10-A', roll: '102', joinDate: '2022-06-01' },
+  { id: 7, email: 'liam@school.com', password: 'password123', role: 'student', name: 'Liam Chen', phone: '+1 555-0107', class: '10-B', roll: '201', joinDate: '2022-06-01' },
+  { id: 8, email: 'sofia@school.com', password: 'password123', role: 'student', name: 'Sofia Patel', phone: '+1 555-0108', class: '9-A', roll: '301', joinDate: '2023-06-01' },
+  { id: 9, email: 'noah@school.com', password: 'password123', role: 'student', name: 'Noah Williams', phone: '+1 555-0109', class: '9-B', roll: '302', joinDate: '2023-06-01' },
 ];
 
 const defaultStudents: Student[] = [
