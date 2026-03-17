@@ -38,8 +38,21 @@ const LoginPage = () => {
       teacher: { email: 'teacher@school.com', password: 'password123' },
       student: { email: 'student@school.com', password: 'password123' },
     };
-    setEmail(creds[role].email);
-    setPassword(creds[role].password);
+    const { email: e, password: p } = creds[role];
+    setEmail(e);
+    setPassword(p);
+    setError('');
+    setLoading(true);
+    setTimeout(() => {
+      const result = login(e, p);
+      if (result.success) {
+        const user = JSON.parse(localStorage.getItem('erp_currentUser') || '{}');
+        navigate(`/${user.role}`, { replace: true });
+      } else {
+        setError(result.message);
+      }
+      setLoading(false);
+    }, 300);
   };
 
   return (

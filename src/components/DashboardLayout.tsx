@@ -72,7 +72,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         </div>
         {!collapsed && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-hidden">
-            <h2 className="font-semibold text-sm text-sidebar-accent-foreground">Scholaris ERP</h2>
+            <h2 className="font-semibold text-sm text-sidebar-accent-foreground">SMMHSS ERP</h2>
             <p className="text-xs text-sidebar-muted capitalize">{user.role} Panel</p>
           </motion.div>
         )}
