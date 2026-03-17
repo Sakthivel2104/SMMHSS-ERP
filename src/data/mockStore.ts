@@ -75,11 +75,13 @@ export interface Notification {
   id: number;
   title: string;
   message: string;
-  type: 'homework' | 'event' | 'meeting' | 'announcement' | 'fee';
+  type: 'homework' | 'event' | 'meeting' | 'announcement' | 'fee' | 'notes';
   targetRole: 'all' | 'student' | 'teacher';
   date: string;
   read: boolean;
   createdBy: number;
+  attachmentName?: string;
+  attachmentData?: string;
 }
 
 export interface Fee {
