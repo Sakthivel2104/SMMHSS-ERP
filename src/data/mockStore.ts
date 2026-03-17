@@ -119,10 +119,10 @@ const defaultUsers: User[] = [
 
 const defaultStudents: Student[] = [
   { id: 1, userId: 3, name: 'Alex Rivera', email: 'student@school.com', phone: '+1 555-0103', class: '10-A', roll: '101', section: 'A', parentName: 'Maria Rivera', parentPhone: '+1 555-0201', address: '123 Oak Street', joinDate: '2022-06-01', status: 'active' },
-  { id: 2, userId: 0, name: 'Emma Thompson', email: 'emma@school.com', phone: '+1 555-0106', class: '10-A', roll: '102', section: 'A', parentName: 'John Thompson', parentPhone: '+1 555-0202', address: '456 Pine Ave', joinDate: '2022-06-01', status: 'active' },
-  { id: 3, userId: 0, name: 'Liam Chen', email: 'liam@school.com', phone: '+1 555-0107', class: '10-B', roll: '201', section: 'B', parentName: 'Wei Chen', parentPhone: '+1 555-0203', address: '789 Elm Road', joinDate: '2022-06-01', status: 'active' },
-  { id: 4, userId: 0, name: 'Sofia Patel', email: 'sofia@school.com', phone: '+1 555-0108', class: '9-A', roll: '301', section: 'A', parentName: 'Raj Patel', parentPhone: '+1 555-0204', address: '321 Maple Dr', joinDate: '2023-06-01', status: 'active' },
-  { id: 5, userId: 0, name: 'Noah Williams', email: 'noah@school.com', phone: '+1 555-0109', class: '9-B', roll: '302', section: 'B', parentName: 'Sarah Williams', parentPhone: '+1 555-0205', address: '654 Cedar Ln', joinDate: '2023-06-01', status: 'active' },
+  { id: 2, userId: 6, name: 'Emma Thompson', email: 'emma@school.com', phone: '+1 555-0106', class: '10-A', roll: '102', section: 'A', parentName: 'John Thompson', parentPhone: '+1 555-0202', address: '456 Pine Ave', joinDate: '2022-06-01', status: 'active' },
+  { id: 3, userId: 7, name: 'Liam Chen', email: 'liam@school.com', phone: '+1 555-0107', class: '10-B', roll: '201', section: 'B', parentName: 'Wei Chen', parentPhone: '+1 555-0203', address: '789 Elm Road', joinDate: '2022-06-01', status: 'active' },
+  { id: 4, userId: 8, name: 'Sofia Patel', email: 'sofia@school.com', phone: '+1 555-0108', class: '9-A', roll: '301', section: 'A', parentName: 'Raj Patel', parentPhone: '+1 555-0204', address: '321 Maple Dr', joinDate: '2023-06-01', status: 'active' },
+  { id: 5, userId: 9, name: 'Noah Williams', email: 'noah@school.com', phone: '+1 555-0109', class: '9-B', roll: '302', section: 'B', parentName: 'Sarah Williams', parentPhone: '+1 555-0205', address: '654 Cedar Ln', joinDate: '2023-06-01', status: 'active' },
 ];
 
 const defaultTeachers: Teacher[] = [
