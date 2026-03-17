@@ -3,10 +3,12 @@ import { db, type Student } from '@/data/mockStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Plus, Search, Pencil, Trash2, X } from 'lucide-react';
+import { Plus, Search, Pencil, Trash2, Eye } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 const AdminStudents = () => {
+  const navigate = useNavigate();
   const [students, setStudents] = useState(db.getStudents());
   const [search, setSearch] = useState('');
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -120,6 +122,9 @@ const AdminStudents = () => {
                     </span>
                   </td>
                   <td className="p-4 text-right">
+                    <button onClick={() => navigate(`/admin/students/${s.id}`)} className="text-muted-foreground hover:text-primary mr-2 transition-colors" title="View Details">
+                      <Eye className="w-4 h-4" />
+                    </button>
                     <button onClick={() => openEdit(s)} className="text-muted-foreground hover:text-primary mr-2 transition-colors">
                       <Pencil className="w-4 h-4" />
                     </button>

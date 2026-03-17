@@ -29,6 +29,7 @@ import StudentMarks from "@/pages/student/StudentMarks";
 import StudentAttendance from "@/pages/student/StudentAttendance";
 import StudentFees from "@/pages/student/StudentFees";
 import StudentPerformance from "@/pages/admin/StudentPerformance";
+import StudentDetailView from "@/pages/admin/StudentDetailView";
 
 import NotFound from "@/pages/NotFound";
 
@@ -54,6 +55,7 @@ const App = () => (
             {/* Admin routes */}
             <Route path="/admin" element={<DashboardRoute roles={['admin']}><AdminDashboard /></DashboardRoute>} />
             <Route path="/admin/students" element={<DashboardRoute roles={['admin']}><AdminStudents /></DashboardRoute>} />
+            <Route path="/admin/students/:id" element={<DashboardRoute roles={['admin']}><StudentDetailView /></DashboardRoute>} />
             <Route path="/admin/teachers" element={<DashboardRoute roles={['admin']}><AdminTeachers /></DashboardRoute>} />
             <Route path="/admin/attendance" element={<DashboardRoute roles={['admin']}><AdminAttendance /></DashboardRoute>} />
             <Route path="/admin/marks" element={<DashboardRoute roles={['admin']}><AdminMarks /></DashboardRoute>} />
