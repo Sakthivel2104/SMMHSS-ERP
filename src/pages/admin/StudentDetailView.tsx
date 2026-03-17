@@ -2,7 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { db } from '@/data/mockStore';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, User, Phone, Mail, MapPin, Calendar, Users } from 'lucide-react';
+import { ArrowLeft, User, Phone, Mail, MapPin, Calendar, Users, FileDown } from 'lucide-react';
+import { generateReportCard } from '@/lib/reportCard';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
