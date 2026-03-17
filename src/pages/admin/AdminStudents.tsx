@@ -122,6 +122,9 @@ const AdminStudents = () => {
                     </span>
                   </td>
                   <td className="p-4 text-right">
+                    <button onClick={() => navigate(`/admin/students/${s.id}`)} className="text-muted-foreground hover:text-primary mr-2 transition-colors" title="View Details">
+                      <Eye className="w-4 h-4" />
+                    </button>
                     <button onClick={() => openEdit(s)} className="text-muted-foreground hover:text-primary mr-2 transition-colors">
                       <Pencil className="w-4 h-4" />
                     </button>
