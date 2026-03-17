@@ -75,11 +75,13 @@ export interface Notification {
   id: number;
   title: string;
   message: string;
-  type: 'homework' | 'event' | 'meeting' | 'announcement' | 'fee';
+  type: 'homework' | 'event' | 'meeting' | 'announcement' | 'fee' | 'notes';
   targetRole: 'all' | 'student' | 'teacher';
   date: string;
   read: boolean;
   createdBy: number;
+  attachmentName?: string;
+  attachmentData?: string;
 }
 
 export interface Fee {
@@ -109,14 +111,18 @@ const defaultUsers: User[] = [
   { id: 3, email: 'student@school.com', password: 'password123', role: 'student', name: 'Alex Rivera', phone: '+1 555-0103', class: '10-A', roll: '101', joinDate: '2022-06-01' },
   { id: 4, email: 'math@school.com', password: 'password123', role: 'teacher', name: 'Elena Rodriguez', phone: '+1 555-0104', subject: 'Mathematics', joinDate: '2021-08-15' },
   { id: 5, email: 'science@school.com', password: 'password123', role: 'teacher', name: 'Dr. James Park', phone: '+1 555-0105', subject: 'Physics', joinDate: '2020-09-01' },
+  { id: 6, email: 'emma@school.com', password: 'password123', role: 'student', name: 'Emma Thompson', phone: '+1 555-0106', class: '10-A', roll: '102', joinDate: '2022-06-01' },
+  { id: 7, email: 'liam@school.com', password: 'password123', role: 'student', name: 'Liam Chen', phone: '+1 555-0107', class: '10-B', roll: '201', joinDate: '2022-06-01' },
+  { id: 8, email: 'sofia@school.com', password: 'password123', role: 'student', name: 'Sofia Patel', phone: '+1 555-0108', class: '9-A', roll: '301', joinDate: '2023-06-01' },
+  { id: 9, email: 'noah@school.com', password: 'password123', role: 'student', name: 'Noah Williams', phone: '+1 555-0109', class: '9-B', roll: '302', joinDate: '2023-06-01' },
 ];
 
 const defaultStudents: Student[] = [
   { id: 1, userId: 3, name: 'Alex Rivera', email: 'student@school.com', phone: '+1 555-0103', class: '10-A', roll: '101', section: 'A', parentName: 'Maria Rivera', parentPhone: '+1 555-0201', address: '123 Oak Street', joinDate: '2022-06-01', status: 'active' },
-  { id: 2, userId: 0, name: 'Emma Thompson', email: 'emma@school.com', phone: '+1 555-0106', class: '10-A', roll: '102', section: 'A', parentName: 'John Thompson', parentPhone: '+1 555-0202', address: '456 Pine Ave', joinDate: '2022-06-01', status: 'active' },
-  { id: 3, userId: 0, name: 'Liam Chen', email: 'liam@school.com', phone: '+1 555-0107', class: '10-B', roll: '201', section: 'B', parentName: 'Wei Chen', parentPhone: '+1 555-0203', address: '789 Elm Road', joinDate: '2022-06-01', status: 'active' },
-  { id: 4, userId: 0, name: 'Sofia Patel', email: 'sofia@school.com', phone: '+1 555-0108', class: '9-A', roll: '301', section: 'A', parentName: 'Raj Patel', parentPhone: '+1 555-0204', address: '321 Maple Dr', joinDate: '2023-06-01', status: 'active' },
-  { id: 5, userId: 0, name: 'Noah Williams', email: 'noah@school.com', phone: '+1 555-0109', class: '9-B', roll: '302', section: 'B', parentName: 'Sarah Williams', parentPhone: '+1 555-0205', address: '654 Cedar Ln', joinDate: '2023-06-01', status: 'active' },
+  { id: 2, userId: 6, name: 'Emma Thompson', email: 'emma@school.com', phone: '+1 555-0106', class: '10-A', roll: '102', section: 'A', parentName: 'John Thompson', parentPhone: '+1 555-0202', address: '456 Pine Ave', joinDate: '2022-06-01', status: 'active' },
+  { id: 3, userId: 7, name: 'Liam Chen', email: 'liam@school.com', phone: '+1 555-0107', class: '10-B', roll: '201', section: 'B', parentName: 'Wei Chen', parentPhone: '+1 555-0203', address: '789 Elm Road', joinDate: '2022-06-01', status: 'active' },
+  { id: 4, userId: 8, name: 'Sofia Patel', email: 'sofia@school.com', phone: '+1 555-0108', class: '9-A', roll: '301', section: 'A', parentName: 'Raj Patel', parentPhone: '+1 555-0204', address: '321 Maple Dr', joinDate: '2023-06-01', status: 'active' },
+  { id: 5, userId: 9, name: 'Noah Williams', email: 'noah@school.com', phone: '+1 555-0109', class: '9-B', roll: '302', section: 'B', parentName: 'Sarah Williams', parentPhone: '+1 555-0205', address: '654 Cedar Ln', joinDate: '2023-06-01', status: 'active' },
 ];
 
 const defaultTeachers: Teacher[] = [

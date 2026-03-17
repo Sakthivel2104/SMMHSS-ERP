@@ -38,8 +38,21 @@ const LoginPage = () => {
       teacher: { email: 'teacher@school.com', password: 'password123' },
       student: { email: 'student@school.com', password: 'password123' },
     };
-    setEmail(creds[role].email);
-    setPassword(creds[role].password);
+    const { email: e, password: p } = creds[role];
+    setEmail(e);
+    setPassword(p);
+    setError('');
+    setLoading(true);
+    setTimeout(() => {
+      const result = login(e, p);
+      if (result.success) {
+        const user = JSON.parse(localStorage.getItem('erp_currentUser') || '{}');
+        navigate(`/${user.role}`, { replace: true });
+      } else {
+        setError(result.message);
+      }
+      setLoading(false);
+    }, 300);
   };
 
   return (
@@ -55,7 +68,7 @@ const LoginPage = () => {
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary mb-4">
               <BookOpen className="w-7 h-7 text-primary-foreground" />
             </div>
-            <h1 className="text-2xl font-bold text-foreground">Scholaris ERP</h1>
+            <h1 className="text-2xl font-bold text-foreground">SMMHSS ERP</h1>
             <p className="text-muted-foreground mt-1 text-sm">School Management System</p>
           </div>
 
