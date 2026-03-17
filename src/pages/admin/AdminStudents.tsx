@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 const AdminStudents = () => {
+  const navigate = useNavigate();
   const [students, setStudents] = useState(db.getStudents());
   const [search, setSearch] = useState('');
   const [dialogOpen, setDialogOpen] = useState(false);
