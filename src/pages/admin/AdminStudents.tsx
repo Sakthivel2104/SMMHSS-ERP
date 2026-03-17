@@ -3,7 +3,8 @@ import { db, type Student } from '@/data/mockStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Plus, Search, Pencil, Trash2, X } from 'lucide-react';
+import { Plus, Search, Pencil, Trash2, Eye } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 const AdminStudents = () => {
